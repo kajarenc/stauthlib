@@ -30,4 +30,8 @@ server_metadata_url="...."
 
 Wheel file in this repository generated from this PR: https://github.com/streamlit/streamlit/pull/8786/files
 
-Please not that in order to work Authlib should be also installed in python environment
+Please note that in order to work Authlib should be also installed in python environment
+
+```bash
+pip install Authlib
+```
