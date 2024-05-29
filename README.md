@@ -27,3 +27,7 @@ server_metadata_url="...."
 
 - Run streamlit app: `streamlit run app.py`
 - Run ngrok with static domain, e.g.: `ngrok http 8501 --domain rested-chicken-selected.ngrok-free.app`
+
+Wheel file in this repository generated from this PR: https://github.com/streamlit/streamlit/pull/8786/files
+
+Please not that in order to work Authlib should be also installed in python environment
