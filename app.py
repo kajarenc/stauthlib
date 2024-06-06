@@ -28,6 +28,12 @@ def get_github_user_identity(access_token):
     return data
 
 
+google_button_to_host = st.button("Login WITH Google with message to Host")
+
+if google_button_to_host:
+    st.experimental_user.login(send_redirect_to_host=True, provider="google")
+
+
 google_button = st.button("Login WITH Google")
 
 if google_button:
