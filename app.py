@@ -55,6 +55,12 @@ github_login = st.button("Github Login")
 if github_login:
     st.experimental_user.login(send_redirect_to_host=False, provider="github")
 
+
+github_login_with_redirect_to_host = st.button("Github Login with redirect to host")
+
+if github_login_with_redirect_to_host:
+    st.experimental_user.login(send_redirect_to_host=True, provider="github")
+
 st.write(st.experimental_user)
 
 if st.experimental_user.get("provider") == "github":
