@@ -28,39 +28,29 @@ def get_github_user_identity(access_token):
     return data
 
 
-google_button_to_host = st.button("Login WITH Google with message to Host")
-
-if google_button_to_host:
-    st.experimental_user.login(send_redirect_to_host=True, provider="google")
-
-
-google_button = st.button("Login WITH Google")
+google_button = st.button("Login with Google")
 
 if google_button:
-    st.experimental_user.login(send_redirect_to_host=False, provider="google")
+    st.experimental_user.login(provider="google")
 
 
 auth_login = st.button("Authlib Login")
 if auth_login:
-    st.experimental_user.login(send_redirect_to_host=False, provider="auth0")
+    st.experimental_user.login(provider="auth0")
 
 
 microsoft_login = st.button("Microsoft Login")
 
 if microsoft_login:
-    st.experimental_user.login(send_redirect_to_host=False, provider="microsoft")
+    st.experimental_user.login(provider="microsoft")
 
 github_login = st.button("Github Login")
 
 if github_login:
-    st.experimental_user.login(send_redirect_to_host=False, provider="github")
+    st.experimental_user.login(provider="github")
 
 
-github_login_with_redirect_to_host = st.button("Github Login with message to Host")
-
-if github_login_with_redirect_to_host:
-    st.experimental_user.login(send_redirect_to_host=True, provider="github")
-
+st.write(":sparkles: :rainbow[User data]")
 st.write(st.experimental_user)
 
 if st.experimental_user.get("provider") == "github":

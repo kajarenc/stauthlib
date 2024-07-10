@@ -5,7 +5,7 @@ Demo Repo
 Please install ngrok.
 In free version you have 1 static domain.
 
-Register your auth app with Redirect URL: <https://ngrok-static-domain/login>
+Register your auth app with Redirect URL: <https://ngrok-static-domain/oauth2callback>
 
 Add your auth app secrets under the separate auth section in `secrets.toml`
 
@@ -13,7 +13,7 @@ e.g.
 
 ```toml
 [auth] #
-redirect_uri = "https://rested-chicken-selected.ngrok-free.app/login"
+redirect_uri = "https://rested-chicken-selected.ngrok-free.app/oauth2callback"
 [auth.google]
 client_id = "...."
 client_secret = "...."
