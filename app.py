@@ -1,9 +1,8 @@
-import requests
 import streamlit as st
 
 st.title("Auth demo!")
 
-left, middle, right, far_right = st.columns(4)
+left, middle, right, logout_button_column = st.columns(4)
 
 
 with left:
@@ -13,8 +12,8 @@ with left:
         st.experimental_user.login(provider="google")
 
 with middle:
-    auth_login = st.button("Authlib Login")
-    if auth_login:
+    auth_zero_login = st.button("Auth0 Login")
+    if auth_zero_login:
         st.experimental_user.login(provider="auth0")
 
 with right:
@@ -28,7 +27,7 @@ st.write(":sparkles: :rainbow[User data]")
 st.write(st.experimental_user)
 
 
-with far_right:
+with logout_button_column:
     logout_button = st.button("Logout")
     if logout_button:
         st.experimental_user.logout()
