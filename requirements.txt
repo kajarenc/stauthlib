@@ -1,2 +1,2 @@
-./streamlit-1.39.0-py2.py3-none-any.whl
+./streamlit-1.40.1-py2.py3-none-any.whl
 Authlib
