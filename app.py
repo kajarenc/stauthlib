@@ -4,7 +4,7 @@ st.title("Auth demo!")
 
 
 with st.echo():
-    st.write("Is user logged in?", st.experimental_user.is_authenticated)
+    st.write("Is user logged in?", st.experimental_user.is_authenticated())
 
 left, middle, right, logout_button_column = st.columns(4)
 
