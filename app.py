@@ -43,9 +43,12 @@ st.header("Streamlit app code:")
 st.code(
     body="""
     google_button = st.button("Google Login")
-
     if google_button:
         st.login(provider="google")
+    
+    logout_button = st.button("Logout")
+    if logout_button:
+        st.logout()
     """,
     language="python",
 )
