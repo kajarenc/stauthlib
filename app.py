@@ -1,5 +1,7 @@
 import streamlit as st
 
+st.set_page_config(page_title="Auth demo", page_icon=":material/person_add:")
+
 st.title("Auth demo!")
 
 
@@ -49,6 +51,8 @@ st.code(
     logout_button = st.button("Logout")
     if logout_button:
         st.logout()
+
+    st.write(st.experimental_user)
     """,
     language="python",
 )
